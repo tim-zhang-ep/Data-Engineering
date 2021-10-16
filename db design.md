@@ -19,7 +19,7 @@ PK, type, join column, fact dimension
 
 
 
-- optimization (partition, index)
+- optimization (partition, index, PK)
 
 index - sort??
 partition - predication pushdown
@@ -42,4 +42,10 @@ def hasMailing -> method in Account class
 
 ```
 
+```
+UUID
+tinyURL
+
+
+```
 
