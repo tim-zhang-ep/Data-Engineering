@@ -46,9 +46,3 @@ optimization
 
 ```
 
-```
-Kafka exactly-once
-
-
-
-```
