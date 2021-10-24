@@ -2,6 +2,8 @@
 # db desgin
 
 - db choice (sql vs nosql)
+https://acecodeinterview.com/sql_vs_nosql/
+
 
 
 
