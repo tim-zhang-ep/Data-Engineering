@@ -6,9 +6,7 @@
 - 情景
 https://segmentfault.com/a/1190000024122724
 
-
-
-斐波那契
+a. 斐波那契
 ```
 function Fibonacci (n) {
   if ( n <= 1 ) {return 1};
@@ -31,12 +29,9 @@ dp[2] = 1
 for i in range(3, N + 1):
     dp[i] = dp[i - 1] + dp[i - 2]
 
-
 ```
 
-
-
-factorial
+b. factorial
 ```
 function factorial(n) {
   if (n === 1) return 1;
@@ -44,7 +39,6 @@ function factorial(n) {
 }
 
 factorial(5) // 120
-
 
 
 //尾递归
@@ -57,9 +51,58 @@ factorial(5, 1) // 120
 ```
 
 
+c. search in BST
+```
+def searchBST(root: TreeNode, val: int) -> TreeNode:
+    if root and root.val < val: return searchBST(root.right,val)
+    elif root and root.val > val: return searchBST(root.left,val)
+    return root
+
+
+```
 
 
 
-- 代码优化
-sugar
+
+- syntactic sugar, annotation vs decorator
+The Scala compiler will automatically optimize any truly tail-recursive method. 
+If you annotate a method that you believe is tail-recursive with the @tailrec annotation, then the compiler will warn you if the method is actually not tail-recursive.
+
+syntactic sugar 
+这种语法对语言的功能没有影响，但是更方便程序员使用。 语法糖让程序更加简洁，有更高的可读性
+
+
+closure - decorator
+Python decorators are  syntactic sugar for passing a function to another function and replacing the first function with the result
+
+```py
+# Decorator
+# decorators wrap a function, modifying its behavior
+
+from datetime import datetime
+   
+def func_decorator(func):  # higher-order function
+    def wrapper():
+        if 9 <= datetime.now().hour < 23:
+            func()
+        else:
+            pass  
+
+    return wrapper # return the decorated function
+
+
+@func_decorator
+def say_whee():
+    print("Whee!")
+    
+
+say_whee()
+
+
+```
+
+
+
+- decorator design pattern
+
 
